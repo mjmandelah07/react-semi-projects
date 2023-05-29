@@ -15,9 +15,10 @@ function Counter() {
       <>
       <h1>Counter</h1>
     <div className={styles.counter}>
+      <p>Count: { count }</p>
       <button onClick={ increment }>Click to increase</button>
       <button onClick={ decrement }>Click to decrease</button>
-      <p>Count: { count }</p>
+
     </div>
     </>
   );
