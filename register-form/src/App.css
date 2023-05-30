@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Crimson+Text:ital,wght@0,600;1,600&family=Libre+Baskerville:wght@700&family=Pacifico&family=Roboto:wght@400;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #FD4351;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+form {
+    width: 30%;
+    background-color: #fff;
+    padding: 2rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+h1 {
+    font-family: 'Crimson Text', serif;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.formImg {
+    background-image: url('./photos/vegetable.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 520px;
+    width: 20%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.textField {
+    border: 2px solid black;
+    border-radius: 0;
+    margin-top: 22px;
+}
+
+
+.genderLabel {
+    padding-left: 0;
+}
+
+.buttonLabel {
+    margin-top: 50px;
+}
+
+.btn {
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+}
