@@ -26,10 +26,10 @@ form {
   width: 60%;
 }
 .col-md-8 {
-    height: 480px !important;
+    height: 487px !important;
 }
 .col-md-4 {
-height: 480px !important;
+height: 487px !important;
 }
 h1 {
   font-family: "Crimson Text", serif;
@@ -52,7 +52,7 @@ h1 {
 .textField {
   border: 2px solid black;
   border-radius: 0;
-  margin-top: 22px;
+  margin-top: 6px;
 }
 
 .genderLabel {
@@ -60,12 +60,17 @@ h1 {
 }
 
 .buttonLabel {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .btn {
   font-family: "Crimson Text", serif;
   font-weight: 600;
+}
+span {
+  display: block;
+  font-size: .7rem;
+  color: #da1e2e;
 }
 
 @media screen and (max-width: 930px) {

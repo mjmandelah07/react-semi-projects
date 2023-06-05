@@ -11,6 +11,7 @@ function App() {
     gender: "",
     agree: false,
   });
+  const [errors, setErrors] = useState({});
 
   // onchange function
   const handleChange = (e) => {
@@ -23,9 +24,45 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     console.log(form);
+    const newErrors = {};
+
+    if (form.name === '') {
+      newErrors.name = "Name is required.";
+    }
+    if (form.email === "") {
+      newErrors.email = "Email is required.";
+    } else if (!isValidEmail(form.email)) {
+      newErrors.email = "Please enter a valid email address.";
+    }
+    if (form.gender === '') {
+      newErrors.gender = "Gender is required.";
+    }
+    if (form.agree === false) {
+      newErrors.agree = "You must agree to the terms and conditions.";
+    }
+    setErrors(newErrors);
+    
+    if (Object.keys(newErrors).length === 0) {
+      alert("Form submitted successfully!");
+      setForm({
+        name: "",
+        email: "",
+        description: "",
+        country: "us",
+        gender: "",
+        agree: false,
+      });
+    };
   };
+
+  const isValidEmail = (value) => {
+    // Email format validation using a simple regular expression
+    const emailRegex = /^\S+@\S+\.\S+$/;
+    return emailRegex.test(value);
+  };
+
+  // {errorMessage && <div className="error"> {errorMessage} </div>}
 
   return (
     <div className="container d-flex">
@@ -34,7 +71,7 @@ function App() {
           <div className="formImg"></div>
         </div>
         <div className="col-12 col-md-8">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="inputField">
               <h1>REGISTER TO ORDER</h1>
               <div className="mb-3">
@@ -47,6 +84,7 @@ function App() {
                   id="name"
                   placeholder="Enter Your Name"
                 />
+                {errors.name && <span>{errors.name}</span>}  
               </div>
               <div className="mb-3">
                 <input
@@ -58,6 +96,7 @@ function App() {
                   id="email"
                   placeholder="name@example.com"
                 />
+                {errors.email && <span>{errors.email}</span>}
               </div>
               <div className="mb-3">
                 <input
@@ -134,6 +173,7 @@ function App() {
                     other
                   </label>
                 </div>
+                {errors.gender && <span>{errors.gender}</span>}
               </div>
               <div className="mb-3">
                 <label class="form-check-label" for="agree">
@@ -147,13 +187,11 @@ function App() {
                   name="agree"
                   value={form.agree}
                 />
+                {errors.agree && <span>{errors.agree}</span>}
               </div>
+
               <div className="buttonLabel ">
-                <button
-                  type="submit"
-                  onClick={handleSubmit}
-                  className="btn btn-success"
-                >
+                <button type="submit" className="btn btn-success">
                   SUBMIT
                 </button>
               </div>
@@ -163,6 +201,8 @@ function App() {
       </div>
     </div>
   );
+
+
 }
 
 export default App;
