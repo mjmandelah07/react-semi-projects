@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Crimson+Text:ital,wght@0,600;1,600&family=Libre+Baskerville:wght@700&family=Pacifico&family=Roboto:wght@400;500&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #54A1E8;
+  font-family: 'Crimson Text', serif;
+}
+
+.navbar {
+  background-color: #54A1E8;
+  padding: 1.5rem;
+}
+
+.nav-link, .navbar-brand, .fa {
+  color: #fff;
+}
+
+.nav-item {
+  margin-right: 2rem;
+}
+
+.logo {
+  margin-right: 25rem;
+}
+
+.description {
+  margin-top: 5rem;
+}
+
+.description h1 {
+  font-size: 3rem;
+}
+
+.description p{
+  color: #fff;
+  font: .5rem;
+}
+
+.view {
+  background-color: #fff;
+}
+
+.image {
+  height: 440px;
+  width: 85%;
+}
+.about-image {
+  height: 81%;
+  width: 55%;
+  margin-top: 2.1rem;
+}
+
+.img-back {
+  border-radius: 50%;
+  background-color: blue;
+}
+
+@media screen and (max-width: 797px) {
+  .logo {
+    margin-right: 2rem;
+  }
+  .navbar-toggler:focus{
+    box-shadow: none;
+  }
+  
+  .description {
+    margin-top: 5rem;
+  }
+  
+  .description h1 {
+    font-size: 1.8rem;
+  }
+  .image {
+    height: 400px;
+    width: 80%;
+  }
+  
+}

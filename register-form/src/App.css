@@ -1,61 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Crimson+Text:ital,wght@0,600;1,600&family=Libre+Baskerville:wght@700&family=Pacifico&family=Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Crimson+Text:ital,wght@0,600;1,600&family=Libre+Baskerville:wght@700&family=Pacifico&family=Roboto:wght@400;500&display=swap");
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    background-color: #FD4351;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #fd4351;
+  font-family: "Crimson Text", serif;
 }
-
-.wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 3rem;
+.container {
+  justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
 }
-
 form {
-    width: 30%;
-    background-color: #fff;
-    padding: 2rem;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+  background-color: #f6f2f2;
+  height: 100%;
+  padding: 1.5rem;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
-
+.row {
+  width: 60%;
+}
+.col-md-8 {
+    height: 480px !important;
+}
+.col-md-4 {
+height: 480px !important;
+}
 h1 {
-    font-family: 'Crimson Text', serif;
-    font-weight: bolder;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    text-align: left;
+  font-family: "Crimson Text", serif;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 .formImg {
-    background-image: url('./photos/vegetable.jpg');
-    background-position: center;
-    background-size: cover;
-    height: 520px;
-    width: 20%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+  background-image: url("./photos/vegetable.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .textField {
-    border: 2px solid black;
-    border-radius: 0;
-    margin-top: 22px;
+  border: 2px solid black;
+  border-radius: 0;
+  margin-top: 22px;
 }
 
-
 .genderLabel {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .buttonLabel {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .btn {
-    font-family: 'Crimson Text', serif;
-    font-weight: 600;
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 930px) {
+  .row-repo {
+    width: 100% !important;
+  }
+  form {
+    border-radius: 0 10px 10px 0 !important;
+  }
+  .formImg {
+    border-radius:  10px 0 0 10px !important;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .row-repo {
+    width: 100% !important;
+  }
+  form {
+    border-radius: 0 10px 10px 0!important;
+  }
+  .formImg {
+    border-radius: 10px 0 0 10px !important;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+    form {
+        border-radius:   0 0 10px 10px !important;
+      }
+      .formImg {
+        border-radius: 10px 10px 0 0 !important;
+      }
+      .form-check-inline {
+        margin-right: .8rem !important;
+      }
+}
+
+@media screen and (max-width: 300px) {
+    h1 {
+        font-size: 1.2rem;
+      }
 }
