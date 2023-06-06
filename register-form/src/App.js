@@ -27,7 +27,7 @@ function App() {
     console.log(form);
     const newErrors = {};
 
-    if (form.name === '') {
+    if (form.name === "") {
       newErrors.name = "Name is required.";
     }
     if (form.email === "") {
@@ -35,14 +35,14 @@ function App() {
     } else if (!isValidEmail(form.email)) {
       newErrors.email = "Please enter a valid email address.";
     }
-    if (form.gender === '') {
+    if (form.gender === "") {
       newErrors.gender = "Gender is required.";
     }
     if (form.agree === false) {
       newErrors.agree = "You must agree to the terms and conditions.";
     }
     setErrors(newErrors);
-    
+
     if (Object.keys(newErrors).length === 0) {
       alert("Form submitted successfully!");
       setForm({
@@ -53,7 +53,7 @@ function App() {
         gender: "",
         agree: false,
       });
-    };
+    }
   };
 
   const isValidEmail = (value) => {
@@ -84,7 +84,7 @@ function App() {
                   id="name"
                   placeholder="Enter Your Name"
                 />
-                {errors.name && <span>{errors.name}</span>}  
+                {errors.name && <span>* {errors.name}</span>}
               </div>
               <div className="mb-3">
                 <input
@@ -96,7 +96,7 @@ function App() {
                   id="email"
                   placeholder="name@example.com"
                 />
-                {errors.email && <span>{errors.email}</span>}
+                {errors.email && <span>* {errors.email}</span>}
               </div>
               <div className="mb-3">
                 <input
@@ -125,7 +125,7 @@ function App() {
                   <option value="estonia">Estonia</option>
                 </select>
               </div>
-              <div className="mb-1">
+              <div className="mb-1 radio-div">
                 <div className="form-check form-check-inline genderLabel">
                   <label class="form-check-label" for="gender">
                     Gender:
@@ -173,10 +173,10 @@ function App() {
                     other
                   </label>
                 </div>
-                {errors.gender && <span>{errors.gender}</span>}
+                {errors.gender && <span>* {errors.gender}</span>}
               </div>
-              <div className="mb-3">
-                <label class="form-check-label" for="agree">
+              <div className="mb-3 agree-div">
+                <label className="form-check-label" for="agree">
                   Agree:
                 </label>
                 <input
@@ -187,7 +187,7 @@ function App() {
                   name="agree"
                   value={form.agree}
                 />
-                {errors.agree && <span>{errors.agree}</span>}
+                {errors.agree && <span>* {errors.agree}</span>}
               </div>
 
               <div className="buttonLabel ">
@@ -201,8 +201,6 @@ function App() {
       </div>
     </div>
   );
-
-
 }
 
 export default App;

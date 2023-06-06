@@ -5,7 +5,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  background-color: #fd4351;
+  background-color: #df8484;
   font-family: "Crimson Text", serif;
 }
 .container {
@@ -26,15 +26,15 @@ form {
   width: 60%;
 }
 .col-md-8 {
-    height: 487px !important;
+  height: 487px !important;
 }
 .col-md-4 {
-height: 487px !important;
+  height: 487px !important;
 }
 h1 {
   font-family: "Crimson Text", serif;
   font-weight: bolder;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   text-align: left;
 }
@@ -69,53 +69,174 @@ h1 {
 }
 span {
   display: block;
-  font-size: .7rem;
+  font-size: 0.7rem;
   color: #da1e2e;
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (min-width: 1200px) {
   .row-repo {
     width: 100% !important;
   }
   form {
     border-radius: 0 10px 10px 0 !important;
-  }
-  .formImg {
-    border-radius:  10px 0 0 10px !important;
-  }
-  h1 {
-    font-size: 1.5rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .row-repo {
-    width: 100% !important;
-  }
-  form {
-    border-radius: 0 10px 10px 0!important;
+    padding: 2rem;
   }
   .formImg {
     border-radius: 10px 0 0 10px !important;
   }
   h1 {
+    font-size: 2rem;
+  }
+  .col-md-8 {
+    height: 650px !important;
+  }
+  .col-md-4 {
+    height: 650px !important;
+  }
+  .textField {
+    margin-top: 30px;
+    padding: 12px;
+  }
+  .radio-div {
+    margin-top: 20px;
+  }
+  .buttonLabel {
+    margin-top: 45px;
+  }
+  span {
+    font-size: .8rem;
+  }
+  .buttonLabel>button {
     font-size: 1.5rem;
   }
 }
-
-@media screen and (max-width: 540px) {
-    form {
-        border-radius:   0 0 10px 10px !important;
-      }
-      .formImg {
-        border-radius: 10px 10px 0 0 !important;
-      }
-      .form-check-inline {
-        margin-right: .8rem !important;
-      }
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .row-repo {
+    width: 100% !important;
+  }
+  form {
+    border-radius: 0 10px 10px 0 !important;
+    padding: 1.8rem;
+  }
+  .formImg {
+    border-radius: 10px 0 0 10px !important;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .col-md-8 {
+    height: 522px !important;
+  }
+  .col-md-4 {
+    height: 522px !important;
+  }
+  .textField {
+    margin-top: 20px;
+  }
+  .radio-div {
+    margin-top: 20px;
+  }
+  .buttonLabel {
+    margin-top: 25px;
+  }
+  span {
+    font-size: .8rem;
+  }
 }
 
-@media screen and (max-width: 300px) {
-    h1 {
-        font-size: 1.2rem;
-      }
+@media only screen and (min-width: 766px) and (max-width: 993px) {
+  .row-repo {
+    width: 100% !important;
+  }
+  form {
+    border-radius: 0 10px 10px 0 !important;
+    padding: 2rem;
+  }
+  .formImg {
+    border-radius: 10px 0 0 10px !important;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .col-md-8 {
+    height: 722px !important;
+  }
+  .col-md-4 {
+    height: 722px !important;
+  }
+  .textField {
+    margin-top: 30px;
+    padding: 12px
+  }
+  .radio-div {
+    margin-top: 20px;
+    font-size: 1.3rem;
+  }
+  .agree-div {
+    font-size: 1.3rem;
+  }
+  .buttonLabel {
+    margin-top: 40px;
+  }
+  .buttonLabel>button {
+    font-size: 1.5rem;
+  }
+  
+  span {
+    font-size: 1.15rem;
+  }
+}
+
+@media only screen and  (min-width: 600px) and (max-width: 767px) {
+  .row-repo {
+    width: 100% !important;
+  }
+  form {
+    border-radius: 0 0 10px 10px !important;
+  }
+  .formImg {
+    border-radius: 10px 10px 0 0 !important;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .col-md-8 {
+    height: 520px !important;
+  }
+  .col-md-4 {
+    height: 520px !important;
+  }
+}
+
+
+
+@media only screen and (max-width: 600px){
+  .row-repo {
+    width: 100% !important;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  span {
+    font-size: 0.65rem;
+  }
+  .col-md-8 {
+    height: 520px !important;
+  }
+  .col-md-4 {
+    height: 300px !important;
+  }
+  .formImg {
+    border-radius: 10px 10px 0 0 !important;
+  }
+  form {
+    border-radius: 0 0 10px 10px !important;
+  }
+  
+  .radio-div {
+    font-size: small;
+  }
+  .agree-div {
+    font-size: small;
+  }
 }

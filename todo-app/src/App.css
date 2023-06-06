@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Crimson+Text:ital,wght@0,600;1,600&family=Libre+Baskerville:wght@700&family=Pacifico&family=Roboto:wght@400;500&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #71d185;
+  font-family: "Crimson Text", serif;
+}
+
+.container {
+    border-radius: 10px;
+}
+
+input {
+    border-style: none;
+}
+input:focus {
+    outline: none;
+}
+
+.button {
+    background-color: rgb(20, 78, 30);
+}
