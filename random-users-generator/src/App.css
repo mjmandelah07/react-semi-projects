@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+.alert-div {
+  word-spacing: 2px;
+  background-color: #e8f4f8;
+}
+
+svg {
+  display: inline;
+}
