@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+  --tomato: hsl(4, 100%, 67%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--charcoal-grey);
+}
+
+.news-container {
+  background-color: var(--white);
+  width: 750px;
+  height: 500px;
+}
+
+ul {
+  list-style: none;
+}
+li::before {
+  content: "";
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background-size: cover;
+  background-image: url("./images/icon-list.svg");
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  background-position: center center;
+  vertical-align: middle;
+}
+
+ul li {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 3rem;
+  width: 100%;
+  color: var(--dark-slate-grey);
+}
+
+.news-container p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+.error-msg {
+  color: var(--tomato);
+}
+input {
+  padding-left: 20px;
+  font-size: 12px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--grey);
+}
+
+input:focus ~ button {
+  background-color: var(--tomato) !important;
+  color: var(--white);
+}
+
+form > button {
+  background-color: var(--dark-slate-grey) !important;
+  color: var(--white);
+}
+button:hover {
+  background-color: var(--tomato) !important;
+  color: var(--white);
+}
+
+.success-container {
+  background-color: var(--white);
+  width: 300px;
+  height: 400px;
+}
+.success-container p {
+  font-size: 11px;
+}
+
+.success-container button {
+  background-color: var(--dark-slate-grey);
+  color: var(--white);
+  text-align: center;
+}
+.success-icon {
+  max-width: 44px;
+  height: 44px;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    display: block;
+    background-color: var(--white);
+  }
+
+  #root {
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  .news-container {
+    background-color: var(--white);
+    width: 100%;
+    height: 100%;
+  }
+
+  .news-container p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  li::before {
+    height: 21px;
+    width: 21px;
+  }
+
+  ul li {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 7px;
+  }
+
+  .success-container {
+    background-color: var(--white);
+    width: 100%;
+    min-height: 100vh;
+  }
+  .success-icon {
+    max-width: 64px;
+    height: 64px;
+  }
+}
