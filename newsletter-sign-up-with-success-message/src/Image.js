@@ -6,7 +6,7 @@ const Image = () => {
   const isMobile = window.innerWidth <= 767; // Check if the screen width is less than or equal to 768 pixels (you can adjust this value as needed)
 
   return (
-    <div className="w-full">
+    <div className="w-full ">
       {isMobile ? (
         <img src={mobileImg} alt="Mobile" />
       ) : (

@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div className="flex flex-col-reverse md:flex-row md:py-4 md:pl-4  md:rounded-3xl news-container">
-      <div className="flex flex-col justify-between md:block w-full py-7 px-7 md:p-7">
+      <div className="flex flex-col justify-between md:block  w-full py-7 px-7 md:p-7" >
         
         <h1 className="font-bold mb-3 md:mb-3">Stay updated!</h1>
         <p className="mb-5 md:mb-5">
